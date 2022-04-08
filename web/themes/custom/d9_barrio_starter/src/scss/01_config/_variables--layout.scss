@@ -1,0 +1,47 @@
+// Layout variables
+
+$spacing-factor: 1.25;
+$spacing--01: 8px;
+$spacing--02: 10px;
+$spacing--03: $spacing--02 * $spacing-factor;
+$spacing--04: $spacing--03 * $spacing-factor;
+$spacing--05: $spacing--04 * $spacing-factor;
+$spacing--06: $spacing--05 * $spacing-factor;
+$spacing--07: $spacing--06 * $spacing-factor;
+$spacing--08: $spacing--07 * $spacing-factor;
+$spacing--09: $spacing--08 * $spacing-factor;
+$spacing--10: $spacing--09 * $spacing-factor;
+$spacing--11: $spacing--10 * $spacing-factor;
+$spacing--12: $spacing--11 * $spacing-factor;
+
+$grid-gutter-width: $spacing--06;
+$gutters: (
+        0: 0,
+        1: $spacing--02,
+        2: $spacing--04,
+        3: $spacing--06,
+        4: $spacing--08,
+        5: $spacing--10,
+);
+
+// Note: needing to use a mixin to overcome bug in sass-lint as described here:
+// https://github.com/sasstools/sass-lint/issues/1161
+
+:root {
+  // --bs-gutter-x: 16px;
+  @include root-prop(--bs-gutter-x, $spacing--04);
+}
+
+@media (min-width: 576px) { // Must match sm breakpoint value.
+  :root {
+    // --bs-gutter-x: 24px;
+    @include root-prop(--bs-gutter-x, $spacing--06);
+  }
+}
+
+@media (min-width: 768px) { // Must match md breakpoint value.
+  :root {
+    // --bs-gutter-x: 36px;
+    @include root-prop(--bs-gutter-x, $spacing--08);
+  }
+}

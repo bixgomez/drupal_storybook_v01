@@ -1,0 +1,71 @@
+// IDA color variables
+$c--red: #f90000;
+$c--maroon: #6a2738;
+
+$c--blue: #296086;
+$c--blue-alt: #074f6e;
+
+$c--yellow: #fdb913;
+$c--yellow--dark: darken($c--yellow, 5%);
+$c--yellow--darker: darken($c--yellow, 10%);
+$c--yellow--darkest: darken($c--yellow, 15%);
+
+$c--orange: #ff504d;
+
+$c--black: #000;
+$c--white: #fff;
+
+$c--gray: mix($c--black, $c--white, 50%);
+$c--gray--lightest: #f2f2f2;
+$c--gray--light: mix($c--gray, $c--gray--lightest, 66%);
+$c--gray--lighter: mix($c--gray, $c--gray--lightest, 33%);
+
+$c--gray--darkest: #252725;
+$c--gray--darker: #343434;
+$c--gray--dark: mix($c--gray, $c--gray--darker, 50%);
+
+// override color variables
+$primary-shade: $c--blue;
+$primary-light: lighten($primary-shade, 37%);
+$primary-dark: darken($primary-shade, 12%);
+
+$accent-shade: $c--yellow;
+$accent-light: lighten($accent-shade, 37%);
+$accent-dark: darken($accent-shade, 12%);
+
+// Reassign color vars to semantic color scheme
+$red: $c--red;
+$yellow: $c--yellow;
+$green: #28a745;
+$cyan: #17a2b8;
+$white: $c--white;
+$gray-100: $c--gray--lightest;
+$gray-800: $c--gray--darkest;
+$theme-colors: ( primary: $accent-shade, secondary: $primary-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
+$brand-primary: $accent-shade;
+$brand-inverse: $primary-shade;
+
+// Body
+
+// Settings for the <body> element.
+$body-bg: $white;
+$body-color: $gray-800;
+$inverse-bg: $primary-shade;
+$inverse-color: $white;
+
+// Links
+
+// Style anchor elements.
+$link-color: $c--blue;
+$link-decoration: underline;
+$link-hover-color: $c--yellow;
+$link-hover-decoration: underline;
+
+// Comments
+$comment-spacer-x: 1.25em;
+$comment-spacer-y: 1.25em;
+
+// Responsive font sizes
+$enable-responsive-font-sizes: true;
+$enable-shadows: false;
+$enable-gradients: false;

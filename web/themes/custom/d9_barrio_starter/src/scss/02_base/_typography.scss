@@ -1,0 +1,122 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-family--serif;
+  font-size: $font-size--base;
+  font-weight: $font-weight--normal;
+}
+
+.font-size--01,
+%font-size--01 { font-size: $font-size--01; }
+
+.font-size--02,
+%font-size--02 { font-size: $font-size--02; }
+
+.font-size--03,
+%font-size--03 { font-size: $font-size--03; }
+
+.font-size--04,
+%font-size--04 { font-size: $font-size--04; }
+
+.font-size--05,
+%font-size--05 { font-size: $font-size--05; }
+
+.font-size--06,
+%font-size--06 { font-size: $font-size--06; }
+
+.font-size--07,
+%font-size--07 { font-size: $font-size--07; }
+
+.font-size--08,
+%font-size--08 { font-size: $font-size--08; }
+
+.font-size--09,
+%font-size--09 { font-size: $font-size--09; }
+
+.font-size--10,
+%font-size--10 { font-size: $font-size--10; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 .325em;
+  line-height: 1.2;
+  font-family: $font-family--sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: $font-weight--bold;
+}
+
+h5,
+h6 {
+  font-weight: $font-weight--normal;
+}
+
+h1 {
+  @extend %font-size--09;
+
+  &.page-title {
+    margin-top: $spacing--02;
+    margin-bottom: $spacing--06;
+  }
+}
+
+h2 {
+  @extend %font-size--08;
+}
+
+h3 {
+  @extend %font-size--07;
+}
+
+h4 {
+  @extend %font-size--06;
+}
+
+h5 {
+  @extend %font-size--05;
+}
+
+h6 {
+  @extend %font-size--04;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li { list-style-type: none; }
+
+p,
+dl,
+.text-formatted ul,
+.text-formatted ol {
+  margin-bottom: $spacing--04;
+}
+
+.text-formatted li {
+  margin: 0 0 $spacing--01;
+  padding: 0;
+  list-style-type: none;
+}
+
+.text-formatted ul {
+  padding-left: $spacing--07;
+}
+
+.text-formatted li {
+  list-style-type: disc;
+}
