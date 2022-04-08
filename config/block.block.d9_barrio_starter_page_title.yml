@@ -1,0 +1,20 @@
+uuid: 9e5196ea-a20d-45ed-b3da-c8dc0b4d0ef9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - d9_barrio_starter
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: d9_barrio_starter_page_title
+theme: d9_barrio_starter
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 67def8e6-52dc-4f50-83d8-158f7d0ac47d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - d9_barrio_starter
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: d9_barrio_starter_help
+theme: d9_barrio_starter
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 44ffa94b-cdf2-4f5c-bc0a-3ddef4579a72
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - d9_barrio_starter
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: d9_barrio_starter_messages
+theme: d9_barrio_starter
+region: header_first
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }
