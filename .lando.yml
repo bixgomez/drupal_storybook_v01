@@ -1,0 +1,6 @@
+name: d9-starter-theme
+recipe: pantheon
+config:
+  framework: drupal9
+  site: d9-starter-theme
+  id: 4067104f-90f5-4b06-9eef-1ccb70be6d8c
