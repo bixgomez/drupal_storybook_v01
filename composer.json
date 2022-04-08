@@ -14,13 +14,22 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "self.version",
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/bootstrap_barrio": "^5.5",
+        "drupal/bootstrap_sass": "^5.0",
+        "drupal/components": "^2.4",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drupal/devel": "^4.1",
+        "drupal/paragraphs": "^1.13",
+        "drupal/twig_render_this": "^1.8",
+        "drupal/twig_tweak": "^3.1",
+        "drupal/twig_vardumper": "^3.0",
+        "drush/drush": "^10",
         "pantheon-systems/drupal-integrations": "^9",
-        "cweagans/composer-patches": "^1.7",
-        "drush/drush": "^10"
+        "pantheon-upstreams/upstream-configuration": "self.version"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
@@ -28,7 +37,7 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
@@ -66,6 +75,12 @@
         "sort-packages": true,
         "platform": {
             "php": "7.4"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }
