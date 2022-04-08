@@ -95,5 +95,10 @@
 
 # Ignore .env files as they are personal
 #/.env
+/.sql
+*.sql
+*.gz
+/legacy-files/
 .idea
+node_modules
 development.local.services.yml
