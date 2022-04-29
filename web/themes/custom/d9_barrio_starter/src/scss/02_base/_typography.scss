@@ -1,12 +1,13 @@
 html {
-  -webkit-font-smoothing: antialiased;
+  font-size: $font-size--root;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body {
-  font-family: $font-family--serif;
+  color: $c--gray--darker;
   font-size: $font-size--base;
-  font-weight: $font-weight--normal;
+  line-height: $line-height--base;
 }
 
 .font-size--01,
@@ -40,83 +41,190 @@ body {
 %font-size--10 { font-size: $font-size--10; }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 .325em;
-  line-height: 1.2;
-  font-family: $font-family--sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4 {
+.h1,
+%h1 {
+  font-size: $font-size--07;
   font-weight: $font-weight--bold;
-}
+  line-height: $line-height--sm;
+  margin: 0 0 .5em;
 
-h5,
-h6 {
-  font-weight: $font-weight--normal;
-}
-
-h1 {
-  @extend %font-size--09;
+  @include media-breakpoint-up(md) { font-size: $font-size--h1; }
 
   &.page-title {
-    margin-top: $spacing--02;
-    margin-bottom: $spacing--06;
+    border-bottom: 1px solid $c--gray--light;
+    color: $c--black;
+    padding-bottom: .25em;
+    margin: 0;
   }
 }
 
-h2 {
-  @extend %font-size--08;
+.page-title-wrapper {
+  margin-top: $spacing--md;
+  margin-bottom: $spacing--md;
+
+  @include media-breakpoint-up(md) {
+    margin-top: $spacing--xl;
+    margin-bottom: $spacing--xl;
+  }
 }
 
-h3 {
-  @extend %font-size--07;
+h2,
+.h2,
+%h2 {
+  font-size: $font-size--07;
+  font-weight: $font-weight--bold;
+  line-height: $line-height--sm;
+  margin: 0 0 .75em;
+
+  @include media-breakpoint-up(md) { font-size: $font-size--h2; }
 }
 
-h4 {
-  @extend %font-size--06;
+h3,
+.h3,
+%h3 {
+  font-size: $font-size--06;
+  font-weight: $font-weight--bold;
+  line-height: $line-height--sm;
+  margin: 0 0 1em;
+
+  @include media-breakpoint-up(md) { font-size: $font-size--h3; }
 }
 
-h5 {
-  @extend %font-size--05;
+h4,
+.h4,
+%h4 {
+  font-size: $font-size--04;
+  font-weight: $font-weight--bold;
+  line-height: $line-height--sm;
+  margin: 0 0 1em;
+
+  @include media-breakpoint-up(md) { font-size: $font-size--h4; }
 }
 
-h6 {
-  @extend %font-size--04;
+h5,
+.h5,
+%h5 {
+  font-size: $font-size--04;
+  font-weight: $font-weight--bold;
+  line-height: $line-height--sm;
+  margin: 0 0 1em;
+
+  @include media-breakpoint-up(md) { font-size: $font-size--h5; }
 }
 
-ul,
-ol,
-li {
-  margin: 0;
-  padding: 0;
+h6,
+.h6,
+%h6 {
+  font-size: $font-size--04;
+  font-weight: $font-weight--bold;
+  line-height: $line-height--sm;
+  margin: 0 0 1em;
+
+  @include media-breakpoint-up(md) { font-size: $font-size--h6; }
 }
 
-li { list-style-type: none; }
+a {
+  color: $c--link;
+  text-decoration: none;
+
+  &:hover {
+    color: $c--link--hover;
+    text-decoration: underline;
+  }
+}
+
+p { max-width: 800px; }
 
 p,
 dl,
-.text-formatted ul,
-.text-formatted ol {
-  margin-bottom: $spacing--04;
+ul,
+ol {
+  margin: 0 0 $section-spacer;
 }
 
-.text-formatted li {
-  margin: 0 0 $spacing--01;
-  padding: 0;
-  list-style-type: none;
+li { margin: 0 0 $spacing--02; }
+
+ul,
+ol {
+  padding-inline-start: $spacing--06;
 }
 
-.text-formatted ul {
-  padding-left: $spacing--07;
+div.paragraph--type--image-with-text .field--name-field-body blockquote,
+div.paragraph--type--featured-solo .field--name-field-body blockquote,
+div.paragraph--type--basic-text .field--name-field-body blockquote,
+blockquote {
+  font-size: $font-size--06;
+  padding: 0 1.125em;
+  margin: $section-spacer 0;
+  font-weight: $font-weight--bold;
+  line-height: $line-height--sm;
+  border-left: .25em solid $c--gray--light;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size--07;
+    margin: ($section-spacer * 2) ($section-spacer * 1.5);
+  }
+
+  p {
+    border: 0;
+  }
 }
 
-.text-formatted li {
-  list-style-type: disc;
+p.alert {
+  background-color: $c--white;
+  padding: 0.8em 0.75em 0.8em 3.25em;
+  border: 1px solid $c--gray--lighter;
+  background-image: url(../images/icons/alert.svg);
+  background-repeat: no-repeat;
+  background-position: 0.8em 0.65em;
+  max-width: none;
+}
+
+p.intro {
+  font-size: $font-size--06;
+  max-width: none;
+}
+
+p.callout,
+.callout {
+  @include callout-text;
+
+  max-width: none;
+}
+
+table {
+  border-top: 1px solid $c--on-background--secondary;
+  border-left: 1px solid $c--on-background--secondary;
+  margin: $section-spacer 0;
+
+  tr {
+    border-bottom: 1px solid $c--on-background--secondary;
+
+    &:nth-child(even) {
+      background-color: $c--background--accent-primary;
+    }
+  }
+
+  td,
+  th {
+    border-right: 1px solid $c--on-background--secondary;
+    padding: 15px 24px;
+    padding: $spacing--05 $spacing--06;
+  }
+
+  th {
+    font-size: $font-size--05;
+    font-weight: $font-weight--black;
+    background-color: $c--brand--green-primary;
+    color: $c--white;
+  }
+}
+
+caption {
+  padding-top: $spacing--xs;
+  padding-bottom: 0;
+  color: $c--brand--green-primary;
+  text-align: left;
+  caption-side: bottom;
+  font-size: $font-size-sm;
 }

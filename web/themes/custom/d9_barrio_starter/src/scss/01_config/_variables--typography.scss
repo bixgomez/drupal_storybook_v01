@@ -1,104 +1,69 @@
 /* TYPOGRAPHY */
 
 /* Google Fonts */
-//@import url('https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic');
-//@import url('https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900');
+// @import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic");
+// @import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap');
 
-@font-face {
-  font-family: 'Farnham';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../fonts/FarnhamText Regular.otf') format('opentype');
-}
+// font families
+$font-lato: 'Lato', Arial, Verdana, sans-serif;
+$font-raleway: 'Raleway', Arial, Verdana, sans-serif;
 
-@font-face {
-  font-family: 'Farnham';
-  font-weight: bold;
-  font-style: normal;
-  src: url('../fonts/Farnham Text Bold.otf') format('opentype');
-}
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-old: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family--serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family--sans-serif: "Source Sans Pro", sans-serif;
+$font-family--monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family--base: $font-family--sans-serif;
 
-@font-face {
-  font-family: 'Farnham';
-  font-weight: normal;
-  font-style: italic;
-  src: url('../fonts/Farnham Text Italic.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Replica';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../fonts/lineto-replica-regular-c.eot'),
-  url('../fonts/lineto-replica-regular-c.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/lineto-replica-regular-c.woff') format('woff'),
-  url('../fonts/lineto-replica-regular-c.ttf') format('truetype'),
-  url('../fonts/lineto-replica-regular-c.svg#LLReplicaWeb-Regular') format('svg');
-}
-
-@font-face {
-  font-family: 'Replica';
-  font-weight: bold;
-  font-style: normal;
-  src: 	 url('../fonts/lineto-replica-bold-c.eot'),
-  url('../fonts/lineto-replica-bold-c.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/lineto-replica-bold-c.woff') format('woff'),
-  url('../fonts/lineto-replica-bold-c.ttf') format('truetype'),
-  url('../fonts/lineto-replica-bold-c.svg#LLReplicaWeb-Bold') format('svg');
-}
-
-$font--farnham: 'Farnham';
-$font--replica: 'Replica';
-
-$font-family--serif: $font--farnham, Georgia, 'Times New Roman', Times, serif;
-$font-family--sans-serif: $font--replica, Helvetica, Arial, Verdana, sans-serif;
-$font-family--monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-
-$font-size--base: 1rem; // Assumes the browser default, typically `16px`
-
-$font-weight--normal: normal;
-$font-weight--bold: bold;
+$font-weight--normal: 400;
+$font-weight--bold: 600;
+$font-weight--black: 800;
 $font-weight--base: $font-weight--normal;
 
-$line-height--base: 1.5;
+$font-size--root: 18px;
+$font-size--base: 1rem; // Assumes the browser default, typically 16px
 
-$font-size--01: 8px;
-$font-size--02: 10px;
-$font-size--03: 13px;
-$font-size--04: 16px;
-$font-size--05: 18px;
-$font-size--06: 20px;
-$font-size--07: 24px;
-$font-size--08: 32px;
+// Huntington font sizes.
+$font-size--01: 10px;
+$font-size--02: 13px;
+$font-size--03: 15px;
+$font-size--04: 18px;
+$font-size--05: 19px;
+$font-size--06: 24px; // (combine 23 & 25 -> 24?)
+$font-size--07: 28px;
+$font-size--08: 33px; // (or 34)
 $font-size--09: 40px;
-$font-size--10: 48px;
+$font-size--10: 47px;
+$font-size--11: 57px;
 
-// Variable required in ../../contrib/bootstrap_barrio/scss/components/commerce.scss
-$font-size-xs: $font-size--02;
+$line-height--xs: 1;
+$line-height--sm: 1.2;
+$line-height--md: 1.5;
+$line-height--lg: 1.8;
+$line-height--xl: 2;
 
-$line-height--xxs: 18px;
-$letter-spacing--xxs: .07em;
+$font-size-xs: $font-size--01;
+$font-size-sm: $font-size--02;
+$font-size-md: $font-size--04;
+$font-size-lg: $font-size--05;
+$font-size-xl: $font-size--06;
 
-$line-height--xxs: 18px;
-$letter-spacing--xxs: .07em;
+$font-size--h1: $font-size--11;
+$font-size--h2: $font-size--10;
+$font-size--h3: $font-size--09;
+$font-size--h4: $font-size--08;
+$font-size--h5: $font-size--07;
+$font-size--h6: $font-size--06;
 
-$line-height--xxs: 18px;
-$letter-spacing--xxs: .07em;
+$line-height--base: $line-height--md;
 
-$line-height--xs: 20px;
-$letter-spacing--xs: 0;
-
-$line-height--sm: 22px;
-$letter-spacing--sm: 0;
-
-$line-height--md: 22px;
-$letter-spacing--md: .15px;
-
-$line-height--lg: 24px;
-$letter-spacing--lg: .25px;
-
-$line-height--xl: 40px;
-$letter-spacing--xl: .25px;
-
-$line-height--xxl: 48px;
-$letter-spacing--xxl: -.05px;
+$letter-spacing--xxs: -.15em;
+$letter-spacing--xs: -.1em;
+$letter-spacing--sm: -.05em;
+$letter-spacing--md: 0;
+$letter-spacing--lg: .05em;
+$letter-spacing--xl: .1em;
+$letter-spacing--xxl: .15em;
