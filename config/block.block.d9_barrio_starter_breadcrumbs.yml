@@ -10,8 +10,8 @@ _core:
   default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
 id: d9_barrio_starter_breadcrumbs
 theme: d9_barrio_starter
-region: header_first
-weight: 0
+region: breadcrumbs
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:

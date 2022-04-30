@@ -12,8 +12,8 @@ _core:
   default_config_hash: pnCK21YFjH7iB4XDeokSq3N3XSr6qX8BsqMs9nmip6E
 id: d9_barrio_starter_footer
 theme: d9_barrio_starter
-region: header_first
-weight: 0
+region: footer_second
+weight: -6
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

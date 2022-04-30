@@ -97,6 +97,18 @@
   {% endblock %}
 {% endif %}
 
+{% if page.primary_menu %}
+  {{ page.primary_menu }}
+{% endif %}
+
+{% if page.breadcrumbs %}
+  {{ page.breadcrumbs }}
+{% endif %}
+
+{% if page.info %}
+  {{ page.info }}
+{% endif %}
+
 {# Main #}
 {% block main %}
 
@@ -107,7 +119,9 @@
       {% if page.header %}
         {% block header %}
           <div class="col-sm-12" role="heading">
-            {{ page.header }}
+              {{ page.header_first }}
+              {{ page.header_second }}
+              {{ page.header_third }}
           </div>
         {% endblock %}
       {% endif %}
@@ -182,7 +196,9 @@
 {% if page.footer %}
   {% block footer %}
     <footer class="footer {{ container }}" role="contentinfo">
-      {{ page.footer }}
+        {{ page.footer_first }}
+        {{ page.footer_second }}
+        {{ page.footer_third }}
     </footer>
   {% endblock %}
 {% endif %}

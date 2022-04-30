@@ -12,8 +12,8 @@ _core:
   default_config_hash: jzu74Q7R0QWgw8IniA9HZRSb_a8RPak1M0q5J-VGkZI
 id: d9_barrio_starter_account_menu
 theme: d9_barrio_starter
-region: header_first
-weight: 0
+region: info
+weight: -5
 provider: null
 plugin: 'system_menu_block:account'
 settings:

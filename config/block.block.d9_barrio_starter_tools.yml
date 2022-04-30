@@ -12,14 +12,14 @@ _core:
   default_config_hash: TszJ7dH_11Qjmo_OpMzqznaED4Bvy1XfVnBzTC9LZXE
 id: d9_barrio_starter_tools
 theme: d9_barrio_starter
-region: sidebar_first
-weight: 0
+region: info
+weight: -6
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
   id: 'system_menu_block:tools'
   label: Tools
-  label_display: visible
+  label_display: '0'
   provider: system
   level: 1
   depth: 0

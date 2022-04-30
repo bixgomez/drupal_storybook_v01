@@ -10,8 +10,8 @@ _core:
   default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
 id: d9_barrio_starter_messages
 theme: d9_barrio_starter
-region: header_first
-weight: 0
+region: info
+weight: -4
 provider: null
 plugin: system_messages_block
 settings:
