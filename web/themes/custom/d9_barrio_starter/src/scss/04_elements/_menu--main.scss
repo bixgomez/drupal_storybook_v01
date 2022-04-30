@@ -1,0 +1,33 @@
+.navbar-toggler {
+  border: 1px solid red;
+
+  @include media-breakpoint-up(md) { display: none; }
+}
+
+.section--main-menu {
+  display: none;
+
+  @include media-breakpoint-up(md) { display: block; }
+}
+
+nav.menu--main { width: 100%; }
+
+.container--main-menu .navbar {
+  border-top: 1px solid $c--gray--lighter;
+  border-bottom: 1px solid $c--gray--lighter;
+  padding: 0;
+
+  .navbar-nav {
+    justify-content: space-between;
+    width: 100%;
+
+    &::after { display: none; }
+  }
+
+  .nav-link {
+    @extend %font-size--05;
+    padding: $spacing--01 $spacing--06;
+    line-height: 1;
+    font-weight: $font-weight--bold;
+  }
+}

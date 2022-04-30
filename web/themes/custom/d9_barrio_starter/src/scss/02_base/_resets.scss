@@ -7,3 +7,7 @@ hr {
   height: 1px;
   background-color: $c--gray--darkest;
 }
+
+div > hr:first-child {
+  margin-top: 0;
+}

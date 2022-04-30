@@ -1,0 +1,78 @@
+.header {
+  margin: 16px 0;
+
+  @include media-breakpoint-up(md) { margin: 36px 0; }
+}
+
+.navbar-brand {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  background-image: url('../images/logos/logo--mobile--72x72.svg');
+  background-size: contain;
+  text-indent: -9999px;
+
+  @include media-breakpoint-up(md) {
+    width: 234px;
+    height: 123px;
+    background-image: url('../images/logos/logo--desktop--234x123.png');
+  }
+}
+
+.header-layout {
+  display: flex;
+  justify-content: flex-end;
+
+  @include media-breakpoint-up(md) {
+    display: grid;
+    justify-content: normal;
+    grid-template-areas:
+      'logo menu-b'
+      'logo search'
+      'logo social';
+    grid-template-rows: min-content min-content 1fr;
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.region-header-first {
+  flex: 1;
+
+  @include media-breakpoint-up(md) {
+    flex: none;
+    grid-area: logo;
+  }
+}
+
+.region-header-second {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    grid-area: menu-b;
+  }
+}
+
+.region-header-third {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: search;
+    margin: $spacing--03 0;
+  }
+}
+
+.region-header-fourth {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: social;
+  }
+}

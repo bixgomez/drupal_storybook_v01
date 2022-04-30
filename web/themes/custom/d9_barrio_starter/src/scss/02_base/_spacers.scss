@@ -1,3 +1,5 @@
+// sass-lint:disable no-important
+
 .margin-top--xs {
   margin-top: $spacing--01 !important;
   @include media-breakpoint-up(md) { margin-top: $spacing--02 !important; }
@@ -103,8 +105,8 @@
 .spacers {
   display: flex;
   grid-gap: $spacing--01;
-  padding: $spacing--01;
   margin: $spacing--03 0;
+  padding: $spacing--01;
   background-color: rgba($c--black, .125);
 }
 

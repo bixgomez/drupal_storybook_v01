@@ -1,0 +1,35 @@
+.menu--footer {
+  margin: 3px 0 -8px;
+  width: 100%;
+
+  > .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-gap: $spacing--04;
+  }
+
+  .nav-link {
+    @extend %font-size--03;
+
+    margin-bottom: $spacing--02;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  // Submenu
+  .menu {
+    padding: 0;
+
+    .nav-item {
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-link {
+      text-transform: none;
+      letter-spacing: 0;
+    }
+  }
+}

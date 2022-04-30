@@ -1,28 +1,17 @@
 // Layout variables
 
-// Breakpoints.
-$grid-breakpoints: (
-  xs: 0,
-  sm: 600px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
-
-// Spacers.
-$spacing--01: 4px;
-$spacing--02: 6px;
-$spacing--03: 8px;
-$spacing--04: 12px;
-$spacing--05: 16px;
+$spacing--01: 8px;
+$spacing--02: 10px;
+$spacing--03: 12px;
+$spacing--04: 16px;
+$spacing--05: 18px;
 $spacing--06: 24px;
 $spacing--07: 32px;
 $spacing--08: 40px;
-$spacing--09: 48px;
-$spacing--10: 64px;
-$spacing--11: 80px;
-$spacing--12: 96px;
-$spacing--13: 160px;
+$spacing--09: 50px;
+$spacing--10: 62px;
+$spacing--11: 78px;
+$spacing--12: 98px;
 
 $spacing--xs: $spacing--02;
 $spacing--sm: $spacing--04;
@@ -30,29 +19,35 @@ $spacing--md: $spacing--06;
 $spacing--lg: $spacing--08;
 $spacing--xl: $spacing--10;
 
+$grid-gutter-width: $spacing--md;
+
+$gutters: (
+        0: 0,
+        1: $spacing--xs,
+        2: $spacing--sm,
+        3: $spacing--md,
+        4: $spacing--lg,
+        5: $spacing--xl,
+);
+
+// Note: needing to use a mixin to overcome bug in sass-lint as described here:
+// https://github.com/sasstools/sass-lint/issues/1161
+
 :root {
-  --bs-gutter-x: $spacing--sm;
+  // --bs-gutter-x: 16px;
+  @include root-prop(--bs-gutter-x, $spacing--04);
 }
 
 @media (min-width: 576px) { // Must match sm breakpoint value.
   :root {
-    --bs-gutter-x: $spacing--md;
+    // --bs-gutter-x: 24px;
+    @include root-prop(--bs-gutter-x, $spacing--06);
   }
 }
 
 @media (min-width: 768px) { // Must match md breakpoint value.
   :root {
-    --bs-gutter-x: $spacing--lg;
+    // --bs-gutter-x: 36px;
+    @include root-prop(--bs-gutter-x, $spacing--08);
   }
 }
-
-// Comments
-$comment-spacer-x: $spacing--06;
-$comment-spacer-y: $spacing--06;
-
-// Default spacing between sections/paragraphs
-$section-spacer: $spacing--md;
-
-// Paragraph gutters
-$inner_gutter_width: 14.75%;
-$inner_column_width: (100% - ($inner_gutter_width * 2));

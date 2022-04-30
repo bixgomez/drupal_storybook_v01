@@ -1,0 +1,10 @@
+.content-layout {
+
+  > .container {
+    margin: $spacing--06 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
