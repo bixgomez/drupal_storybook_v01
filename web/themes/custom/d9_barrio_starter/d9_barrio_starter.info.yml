@@ -13,22 +13,17 @@ libraries-override:
   bootstrap_barrio/global-styling: false
 
 regions:
-  top_header: 'Top header'
-  top_header_form: 'Top header form'
-  header: Header
-  header_form: 'Header form'
-  branding: Branding
+  header_first: 'Header first'
+  header_second: 'Header second'
+  header_third: 'Header third'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
   mobile_header_menu: 'Mobile Header Menu'
-  title_header: 'Title Header'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-  highlighted: Highlighted
-  banner_images: 'Banner Images'
-  breadcrumb: Breadcrumb
-  content: Content
-  sidebar: Sidebar
+  highlighted: 'Highlighted'
+  content: 'Content'
+  sidebar: 'Sidebar'
   footer_first: 'Footer first'
   footer_second: 'Footer second'
   footer_third: 'Footer third'
