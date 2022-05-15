@@ -22,6 +22,7 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   highlighted: 'Highlighted'
+  info: 'Info'
   content: 'Content'
   sidebar: 'Sidebar'
   footer_first: 'Footer first'

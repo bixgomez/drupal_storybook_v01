@@ -11,7 +11,7 @@ _core:
 id: d9_barrio_starter_powered
 theme: d9_barrio_starter
 region: footer_third
-weight: -2
+weight: -6
 provider: null
 plugin: system_powered_by_block
 settings:

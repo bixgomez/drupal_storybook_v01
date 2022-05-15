@@ -8,8 +8,8 @@ _core:
   default_config_hash: XRdb8LpbArVA6CpuuEZxzi50JIdjsJaCCZ5o3fH0Blk
 id: d9_barrio_starter_local_actions
 theme: d9_barrio_starter
-region: content
-weight: -20
+region: info
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

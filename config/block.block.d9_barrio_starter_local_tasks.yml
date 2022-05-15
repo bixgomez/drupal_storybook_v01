@@ -8,8 +8,8 @@ _core:
   default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
 id: d9_barrio_starter_local_tasks
 theme: d9_barrio_starter
-region: content
-weight: -40
+region: info
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

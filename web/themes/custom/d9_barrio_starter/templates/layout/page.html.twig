@@ -127,6 +127,15 @@
       </div>
     {% endif %}
 
+    {% set has_info = page.info|render|striptags|trim is not empty %}
+    {% if has_info %}
+      <div class="section section--info">
+        <div class="container">
+          {{ page.info }}
+        </div>
+      </div>
+    {% endif %}
+
     <div id="main-wrapper" class="section section--main clearfix">
       {% block content %}
         <div id="main" class="{{ container }}">

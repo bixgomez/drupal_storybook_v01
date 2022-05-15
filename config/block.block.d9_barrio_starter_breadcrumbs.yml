@@ -1,6 +1,6 @@
 uuid: c6954698-5014-4575-843e-c300f728858d
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
 id: d9_barrio_starter_breadcrumbs
 theme: d9_barrio_starter
-region: breadcrumbs
-weight: -6
+region: content
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:
