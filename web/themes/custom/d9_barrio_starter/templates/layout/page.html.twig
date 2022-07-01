@@ -69,8 +69,8 @@
         {% if container_navbar %}
         <div class="container">{% endif %}
           <div class="mobile-header-region">
-            {% if page.mobile_menu %}
-              {{ page.mobile_menu }}
+            {% if page.mobile_header_menu %}
+              {{ page.mobile_header_menu }}
             {% endif %}
           </div>
           <div class="collapse-wrapper">
@@ -124,7 +124,12 @@
           <div class="row row-offcanvas row-offcanvas-left clearfix">
             <main{{ content_attributes }}>
               <a id="main-content" tabindex="-1"></a>
-              {{ page.content }}
+              {% block page_content %}
+                {{ page.content }}
+              {% endblock %}
+
+              {% block extra_page_content %}
+              {% endblock %}
             </main>
             {% if page.sidebar_first %}
               <div{{ sidebar_first_attributes }}>

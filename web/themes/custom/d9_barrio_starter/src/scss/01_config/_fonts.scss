@@ -24,6 +24,15 @@
   src: url('../fonts/Farnham Text Italic.otf') format('opentype');
 }
 
+// Replica 300 normal.
+@font-face {
+  font-family: 'Replica';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/ReplicaStd Light.otf') format('opentype');
+}
+
+// Replica 400 normal.
 @font-face {
   font-family: 'Replica';
   font-weight: 400;
@@ -32,23 +41,11 @@
        url('../fonts/lineto-replica-regular-c.eot?#iefix') format('embedded-opentype'),
        url('../fonts/lineto-replica-regular-c.woff') format('woff'),
        url('../fonts/lineto-replica-regular-c.ttf') format('truetype'),
-       url('../fonts/lineto-replica-regular-c.svg#LLReplicaWeb-Regular') format('svg');
+       url('../fonts/lineto-replica-regular-c.svg#LLReplicaWeb-Regular') format('svg'),
+       url('../fonts/ReplicaStd Regular.otf') format('opentype');
 }
 
-@font-face {
-  font-family: 'Replica';
-  font-weight: 400;
-  font-style: italic;
-  src: url('../fonts/ReplicaStd Italic.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Replica';
-  font-weight: 300;
-  font-style: italic;
-  src: url('../fonts/ReplicaStd LightItalic.otf') format('opentype');
-}
-
+// Replica 700 normal.
 @font-face {
   font-family: 'Replica';
   font-weight: 700;
@@ -57,5 +54,66 @@
        url('../fonts/lineto-replica-bold-c.eot?#iefix') format('embedded-opentype'),
        url('../fonts/lineto-replica-bold-c.woff') format('woff'),
        url('../fonts/lineto-replica-bold-c.ttf') format('truetype'),
-       url('../fonts/lineto-replica-bold-c.svg#LLReplicaWeb-Bold') format('svg');
+       url('../fonts/lineto-replica-bold-c.svg#LLReplicaWeb-Bold') format('svg'),
+       url('../fonts/ReplicaStdBold.otf') format('opentype');
+}
+
+// Replica 300 italic.
+@font-face {
+  font-family: 'Replica';
+  font-weight: 300;
+  font-style: italic;
+  src: url('../fonts/ReplicaStd LightItalic.otf') format('opentype');
+}
+
+// Replica 400 italic.
+@font-face {
+  font-family: 'Replica';
+  font-weight: 400;
+  font-style: italic;
+  src: url('../fonts/ReplicaStd Italic.otf') format('opentype');
+}
+
+// Replica 700 italic.
+@font-face {
+  font-family: 'Replica';
+  font-weight: 700;
+  font-style: italic;
+  src: url('../fonts/ReplicaStd BoldItalic.otf') format('opentype');
+}
+
+.font-sample--01 {
+  font-family: 'Replica', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-sample--02 {
+  font-family: 'Replica', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-sample--03 {
+  font-family: 'Replica', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-sample--04 {
+  font-family: 'Replica', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.font-sample--05 {
+  font-family: 'Replica', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.font-sample--06 {
+  font-family: 'Replica', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: italic;
 }
