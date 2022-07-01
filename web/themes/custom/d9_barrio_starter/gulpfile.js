@@ -72,7 +72,7 @@ function styles() {
       .pipe(cleanCss())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(paths.scss.dest))
-      .pipe(stylesSassLint())
+      // .pipe(stylesSassLint())
       // .pipe(livereload())
       .pipe(browserSync.stream())
 }
