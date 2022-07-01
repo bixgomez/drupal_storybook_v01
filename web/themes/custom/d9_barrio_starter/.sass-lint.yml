@@ -56,7 +56,7 @@ rules:
     - include: false
   no-extends: 0
   no-ids: 1
-  no-important: 1
+  no-important: 0
   no-invalid-hex: 2
   no-mergeable-selectors: 1
   no-misspelled-properties: 1

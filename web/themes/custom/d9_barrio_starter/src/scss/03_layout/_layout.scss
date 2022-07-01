@@ -34,8 +34,8 @@ body {
   padding: 0;
 
   &--main {
-    padding: $spacing--lg 0;
     flex: 1;
+    padding: $spacing--lg 0;
   }
 
   &--info {

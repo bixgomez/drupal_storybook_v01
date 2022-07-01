@@ -1,0 +1,28 @@
+/* 
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
+
+// All config partials -- config, functions, mixins, etc.
+@import '01_config/config';
+
+// bootstrap
+@import 'bootstrap';
+
+// barrio
+@import 'barrio';
+
+// All base partials.
+@import '02_base/**/*.scss';
+
+// High level layout-specific partials.
+@import '03_layout/**/*.scss';
+
+// Lower level (but still general) elements (such as blocks & menus).
+@import '04_elements/**/*.scss';
+
+// Sass specific to individual components.
+@import '../components/**/*.scss';
+
+// Other components.
+@import '05_components/**/*.scss';

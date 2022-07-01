@@ -1,52 +1,5 @@
 /* TYPOGRAPHY */
 
-/* Google Fonts */
-//@import url('https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic');
-//@import url('https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900');
-
-@font-face {
-  font-family: 'Farnham';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../fonts/FarnhamText Regular.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Farnham';
-  font-weight: bold;
-  font-style: normal;
-  src: url('../fonts/Farnham Text Bold.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Farnham';
-  font-weight: normal;
-  font-style: italic;
-  src: url('../fonts/Farnham Text Italic.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Replica';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../fonts/lineto-replica-regular-c.eot'),
-  url('../fonts/lineto-replica-regular-c.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/lineto-replica-regular-c.woff') format('woff'),
-  url('../fonts/lineto-replica-regular-c.ttf') format('truetype'),
-  url('../fonts/lineto-replica-regular-c.svg#LLReplicaWeb-Regular') format('svg');
-}
-
-@font-face {
-  font-family: 'Replica';
-  font-weight: bold;
-  font-style: normal;
-  src: 	 url('../fonts/lineto-replica-bold-c.eot'),
-  url('../fonts/lineto-replica-bold-c.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/lineto-replica-bold-c.woff') format('woff'),
-  url('../fonts/lineto-replica-bold-c.ttf') format('truetype'),
-  url('../fonts/lineto-replica-bold-c.svg#LLReplicaWeb-Bold') format('svg');
-}
-
 $font--farnham: 'Farnham';
 $font--replica: 'Replica';
 
