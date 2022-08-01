@@ -1,0 +1,38 @@
+<div {{ attributes.addClass('layout', 'layout--layout-builder-demo-page') }}>
+
+  <div {{ region_attributes.images.addClass('layout__region', 'layout__region--image') }}>
+    {{ content.featured_image }}
+  </div><!-- .layout__region--image -->
+
+  <div {{ region_attributes.tabular.addClass('tabular-data', 'layout__region', 'layout__region--tabular') }}>
+    {{ content.tabular }}
+  </div><!-- .layout__region--tabular -->
+
+  <div class="accordion-container">
+    {% set items = {
+      'accordion_1':'Accordion 1',
+      'accordion_2':'Accordion 2',
+      'accordion_3':'Accordion 3',
+      }
+    %}
+    {% for key, value in items %}
+      <div {{ region_attributes[key].addClass('accordion-item', 'layout__region', 'layout__region--'~key) }}>
+        <h2 class="accordion-header" id="heading_{{ key }}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ key }}" aria-expanded="false" aria-controls="collapse_{{ key }}">
+            {{ value | t }}
+          </button>
+        </h2>
+        <div id="collapse_{{ key }}" class="accordion-collapse collapse" aria-labelledby="heading_{{ key }}" data-bs-parent="#artObjectAccordion">
+          <div class="accordion-body">
+            {{ content[key] }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div><!-- .accordion-container -->
+
+  <div {{ region_attributes.info.addClass('layout__region', 'layout__region--info') }}>
+    {{ content.info }}
+  </div><!-- .layout__region--info -->
+
+</div>
