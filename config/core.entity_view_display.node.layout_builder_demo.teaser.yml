@@ -1,0 +1,30 @@
+uuid: 3148ea3d-fd29-46e2-ae33-3782be4283ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.layout_builder_demo.body
+    - node.type.layout_builder_demo
+  module:
+    - text
+    - user
+id: node.layout_builder_demo.teaser
+targetEntityType: node
+bundle: layout_builder_demo
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

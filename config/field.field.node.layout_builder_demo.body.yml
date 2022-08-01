@@ -1,0 +1,23 @@
+uuid: e779b3e5-8816-42e0-9e8f-9be2d5c74224
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.layout_builder_demo
+  module:
+    - text
+id: node.layout_builder_demo.body
+field_name: body
+entity_type: node
+bundle: layout_builder_demo
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

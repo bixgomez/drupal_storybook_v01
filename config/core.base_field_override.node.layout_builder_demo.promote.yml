@@ -1,0 +1,22 @@
+uuid: 2124dd26-68d2-4154-8c39-3123080f7ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.layout_builder_demo
+id: node.layout_builder_demo.promote
+field_name: promote
+entity_type: node
+bundle: layout_builder_demo
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

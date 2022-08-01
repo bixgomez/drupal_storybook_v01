@@ -1,0 +1,18 @@
+uuid: 4d7c61be-83bb-4c1e-8fa0-1c5d4501641a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Layout Builder Demo'
+type: layout_builder_demo
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,72 @@
+.layout-builder__add-block {
+  // padding-top: .5em;
+  // padding-bottom: .5em;
+}
+
+.layout-builder {
+  padding: 1em 1em 0;
+  border: 2px solid #2f91da;
+  background-color: #fff;
+
+  .contextual {
+    top: 9px;
+
+    .trigger { right: 8px }
+  }
+}
+
+.layout-builder-block,
+.layout-builder__add-block,
+.layout-builder__add-section {
+  padding: .625em;
+}
+
+.layout-builder__section .ui-state-drop {
+  margin: 0;
+  padding: .625em;
+  outline: 2px dashed #fedb60;
+  background-color: #ffd;
+}
+
+// Always display the dashed border below layout builder blocks,
+// regardless of whether content preview is enabled.
+.layout-builder-block {
+  border-bottom: 2px dashed #979797;
+}
+
+.layout-builder__add-section {
+  margin-bottom: 1.125em;
+}
+
+.layout-builder-block__content-preview-placeholder-label {
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.layout-builder .layout-builder__layout {
+  margin-top: .5em;
+}
+
+.layout-builder__region {
+  outline: .2em dashed darken(#2f91da, 10%);
+  box-shadow: 0px 0px 10px rgba(#2f91da, .75);
+}
+
+.layout-builder__link--remove {
+  margin-left: -3px;
+}
+
+#drupal-off-canvas form.layout-builder-update-block,
+#drupal-off-canvas form.layout-builder-configure-block,
+#drupal-off-canvas form.layout-builder-configure-section {
+  label {
+    font-family: "Droid sans", "Lucida Grande", sans-serif;
+    font-size: .85em;
+    font-style: italic;
+    color: rgba(white, .75) !important;
+  }
+
+  input.form-text {
+    color: rgba(black, .95) !important;
+  }
+}
