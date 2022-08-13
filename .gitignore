@@ -87,6 +87,8 @@
 # already ignored. We must also ignore these generated files.
 /web/**/.gitignore
 
+.lando.local.yml
+
 
 # Other common rules
 # ------------------

@@ -4,3 +4,30 @@ config:
   framework: drupal9
   site: d9-starter-theme
   id: 4067104f-90f5-4b06-9eef-1ccb70be6d8c
+services:
+  appserver:
+    xdebug: false
+    build:
+      - composer install
+    composer_version: 2-latest
+    config:
+      php: .vscode/php.ini
+  node:
+    type: node:14
+    ssl: true
+    globals:
+      gulp-cli: latest
+tooling:
+  npm:
+    service: node # name matches the service listed above.
+  node:
+    service: node
+  gulp:
+    service: node
+
+# https://bitbucket.org/urban-insight/lhny/src/master/.lando.yml
+# If you run M1 Mac and experience DB lost after `lando rebuild`,
+# put these lines in your .lando.local.yml
+# services:
+#   database:
+#     type: mysql
