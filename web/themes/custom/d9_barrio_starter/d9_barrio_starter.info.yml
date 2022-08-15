@@ -34,7 +34,7 @@ regions:
 components:
   namespaces:
     component:
-      - src/components
+      - patterns/source/_patterns
 
 # Information added by Drupal.org packaging script on 2021-10-11
 version: '5.0.5'
