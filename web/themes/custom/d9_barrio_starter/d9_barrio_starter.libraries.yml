@@ -28,3 +28,15 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+
+splide:
+  version: 4.0.7
+  css:
+    component:
+      js/splide/dist/css/splide-core.min.css: { weight: -49 }
+      js/splide/dist/css/splide.min.css: { weight: -48 }
+      # js/splide/dist/css/themes/splide-default.min.css: { weight: -47 }
+  js:
+    js/splide/dist/js/splide.min.js: { weight: -49 }
+  dependencies:
+    - core/jquery
