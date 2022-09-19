@@ -131,10 +131,17 @@
           ]
         },
         {
-          "id": "templates",
+          "id": "sections",
           "recursive": true,
           "paths": [
-            "source/_patterns/templates"
+            "source/_patterns/sections"
+          ]
+        },
+        {
+          "id": "layouts",
+          "recursive": true,
+          "paths": [
+            "source/_patterns/layouts"
           ]
         },
         {
