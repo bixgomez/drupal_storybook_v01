@@ -1,7 +1,0 @@
-// Note: needing to use this mixin to overcome bug in sass-lint as described here:
-// https://github.com/sasstools/sass-lint/issues/1161
-@mixin root-prop($prop: null, $value: null) {
-  @if ($prop and $value) {
-    #{$prop}: $value;
-  }
-}
