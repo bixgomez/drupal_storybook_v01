@@ -1,0 +1,88 @@
+// Neutrals.
+$c--black: #000;
+$c--white: #fff;
+$c--yellow: #FFFF00;
+
+$c--gray--lightest: #F5F5F5; // was mix($c--black, $c--white, 10%)
+$c--gray--lighter: mix($c--black, $c--white, 15%);
+$c--gray--light: mix($c--black, $c--white, 30%);
+$c--gray: mix($c--black, $c--white, 50%);
+$c--gray--dark: mix($c--black, $c--white, 70%);
+$c--gray--darker: mix($c--black, $c--white, 80%);
+$c--gray--darkest: mix($c--black, $c--white, 90%);
+
+// Brand colors.
+// $c--brand--primary: #C25344; // A deep rust.
+$c--brand--primary: #b84e40; // More widely accessible version of original color.
+$c--brand--green-primary: #697137; // A deep olive green.
+$c--brand--green-hover: #4E5428; // A slightly deeper olive green.
+$c--brand--hover: #B72A1B; // A deep red used for the main menu hover state.
+$c--on-background--primary: #333333;
+$c--on-background-colors--primary: #C7362C;
+$c--on-background--secondary: #404726;
+$c--on-background-border--primary: #BB913F;
+$c--background--accent-primary: #F5F5F0; // A very light green, nearly white.
+$c--background--accent-secondary: #EDEDDE; // A slightly darker, but still very light green.
+
+$c--frontiers-green: #33460e;
+$c--verso-red: #730f31;
+
+// Link colors.
+$c--link: $c--brand--primary;
+$c--link--hover: $c--on-background-colors--primary;
+$c--link__main-menu: $c--on-background--primary;
+$c--link__main-menu--hover: $c--on-background--primary;
+$c--link--light: darken($c--white, 20%);
+$c--link--light-hover: $c--white;
+
+$c--alert-color: $c--brand--hover;
+$c--alert-border-color: $c--brand--hover;
+$c--alert-bg-color: #FBD8D4;
+
+$primary-shade: $c--brand--primary;
+$primary-light: lighten($primary-shade, 37%);
+$primary-dark: darken($primary-shade, 10%);
+
+$accent-shade: #333333;
+$accent-light: lighten($accent-shade, 37%);
+$accent-dark: darken($accent-shade, 12%);
+
+// Reassign color vars to semantic color scheme
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$cyan: #17a2b8;
+
+$gray-100: #f8f9fa !default;
+$gray-800: #343a40 !default;
+
+$theme-colors: ( primary: $accent-shade, secondary: $primary-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
+$brand-primary: $accent-shade;
+$brand-inverse: $primary-shade;
+
+$lt-gray: #EDEDEB;
+$dk-green: $c--brand--green-hover; // was #3F4725
+$olive_green: $c--brand--green-primary; // was #697233
+
+// Legacy colors
+$legacy-red-light: #da6055;
+$legacy-red-dark: #d73e30;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $c--white;
+$body-color: $c--gray--darkest; // was #333333
+
+$inverse-bg: $primary-shade;
+
+// Links
+//
+// Style anchor elements.
+$link-color: $accent-shade;
+$link-decoration: none;
+$link-hover-color: $accent-dark;
+$link-hover-decoration: underline;
+
+// Responsive font sizes
+$enable-responsive-font-sizes: true;
