@@ -1,0 +1,17 @@
+name: UI Storybook Theme v01
+type: theme
+description: This is a sub theme of Stable 9
+core_version_requirement: ^8 || ^9 || ^10
+# Defines the base theme
+base theme: stable9
+# Defines libraries group in which we can add CSS/JS.
+libraries:
+  - ui_storybook_v01/global-styling
+# Regions, quote the names
+regions:
+  header: 'Header'
+  featured: 'Featured'
+  content: 'Content'
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  footer: 'Footer'
