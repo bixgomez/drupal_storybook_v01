@@ -2,3 +2,12 @@ global-styling:
   css:
     component:
       css/style.css: {}
+sb-css:
+  css:
+    theme:
+      sb-drupal/dist/css/sb-main.min.css: {}
+sb-js:
+  js:
+    sb-drupal/dist/js/sb-main.min.js: {}
+  dependencies:
+    - core/drupal

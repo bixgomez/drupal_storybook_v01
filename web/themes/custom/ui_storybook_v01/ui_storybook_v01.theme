@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the UI Storybook Theme v01 theme.
+ */
+
+use \Drupal\block_content\BlockContentInterface;
+
+/**
+ * Implements HOOK_preprocess_block().
+ */
+function ui_storybook_v01_preprocess_block(&$variables) {
+  $content = $variables['elements']['content'];
+
+  if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
+    // Sets extra vars for custom block types.
+    $variables['block_bundle'] = $content['#block_content']->bundle();
+    $variables['block_id_num'] = $content['#block_content']->id();
+  }
+}
+
+/**
+ * Implements HOOK_theme_suggestions_block_alter().
+ */
+function ui_storybook_v01_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}

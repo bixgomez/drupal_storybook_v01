@@ -7,6 +7,10 @@ base theme: stable9
 # Defines libraries group in which we can add CSS/JS.
 libraries:
   - ui_storybook_v01/global-styling
+  - ui_storybook_v01/sb-css
+  - ui_storybook_v01/sb-js
+ckeditor_stylesheets:
+  - sb-drupal/dist/css/main.min.css
 # Regions, quote the names
 regions:
   header: 'Header'
@@ -15,3 +19,7 @@ regions:
   sidebar_first: 'First sidebar'
   sidebar_second: 'Second sidebar'
   footer: 'Footer'
+component-libraries:
+  sb:
+    paths:
+      - sb-drupal/dist/twig
