@@ -27,8 +27,6 @@ module:
   help: 0
   history: 0
   image: 0
-  layout_builder: 0
-  layout_discovery: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -40,8 +38,6 @@ module:
   rdf: 0
   search: 0
   shortcut: 0
-  simple_block: 0
-  simple_block_layout_builder: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -60,4 +56,6 @@ theme:
   seven: 0
   bootstrap_barrio: 0
   d9_barrio_starter: 0
+  stable9: 0
+  ui_storybook_v01: 0
 profile: standard

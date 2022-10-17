@@ -1,5 +1,7 @@
 ## Usage
 
+####*An example of the beauty of StoryBook's awesome documentation feature.  It's truly beautiful!*
+
 Cards can be used individually or within a grid, and contain the following elements:
 
 - Image (3:2 ratio)
@@ -14,12 +16,12 @@ This component can be implemented as a block or as a grid within a view. Block i
 
 The block type should be created with the following fields:
 
-| Field       | Required | Type                     | Max Values | Additional settings       | Display Format               |
-| ----------- | -------- | ------------------------ | ---------- | ------------------------- | ---------------------------- |
-| Card Image  | No       | Entity reference (Media) | 1          | Media type: Image         | Rendered Entity (as Default) |
-| Kicker Text | No       | Text (plain)             | 1          |                           | Plain Text                   |
-| Body Text   | Yes      | Text (formatted, long)   | 1          |                           | Default                      |
-| Link        | Yes      | Link                     | 1          | Allow link text: required | Link (Link text not trimmed) |
+| Field       | Machine Name | Required | Type                     | Max Values | Additional settings       | Display Format               |
+|-------------|--------------|----------|--------------------------|------------|---------------------------|------------------------------|
+| Card Image  | image        | No       | Entity reference (Media) | 1          | Media type: Image         | Rendered Entity (as Default) |
+| Kicker Text | kicker       | No       | Text (plain)             | 1          |                           | Plain Text                   |
+| Body Text   | body         | Yes      | Text (formatted, long)   | 1          |                           | Default                      |
+| Link        | link         | Yes      | Link                     | 1          | Allow link text: required | Link (Link text not trimmed) |
 
 - All field labels should be set to _Hidden_.
 - Field names do not need to match exactly what is in this table as long as they are correctly mapped within your theme's block template. However, many of these fields will be reused in other components, so it is advisable to be consistent across the site.
@@ -51,7 +53,7 @@ The block type should be created with the following fields:
 <div{{ attributes.addClass(classes) }}>
   {{ title_suffix }}
 
-  {% include "@namespace/card/card.twig" with {
+  {% include "@sb/card/card.twig" with {
     element_type: 'div',
     kicker_text: content.field_kicker|render|striptags|trim,
     heading_text: label,

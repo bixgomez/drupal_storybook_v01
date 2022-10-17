@@ -1,0 +1,20 @@
+uuid: dd07e74c-a554-4ec2-87bd-71f5cbe9e1bb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ui_storybook_v01
+_core:
+  default_config_hash: XRdb8LpbArVA6CpuuEZxzi50JIdjsJaCCZ5o3fH0Blk
+id: ui_storybook_v01_local_actions
+theme: ui_storybook_v01
+region: header
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

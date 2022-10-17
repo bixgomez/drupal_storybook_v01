@@ -1,0 +1,25 @@
+uuid: 6b1b8637-be28-4ad3-b3cc-0ff11001b1a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ui_storybook_v01
+_core:
+  default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
+id: ui_storybook_v01_branding
+theme: ui_storybook_v01
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

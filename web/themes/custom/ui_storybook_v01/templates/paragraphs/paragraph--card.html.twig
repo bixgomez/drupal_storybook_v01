@@ -1,0 +1,31 @@
+{%
+    set classes = [
+    'block',
+    'block--' ~ configuration.provider|clean_class,
+    block_bundle ? 'block--' ~ block_bundle|clean_class
+]
+%}
+
+{# Preprocess Image #}
+{% set image = {
+    src: file_url(content.field_image[0]['#item'].entity.uri.value),
+    alt: content.field_image[0]['#item'].alt
+}%}
+
+{# Preprocess link #}
+{% set link = {
+    url: content.field_link[0]['#url'],
+    text: content.field_link[0]['#title']
+}%}
+
+<div{{ attributes.addClass(classes) }}>
+    {{ title_suffix }}
+
+    {% include "@sb/card/card.twig" with {
+        element_type: 'div',
+        kicker_text: content.field_kicker|render|striptags|trim,
+        heading_text: content.field_title|render|striptags|trim,
+        heading_level: 'h2',
+        body_text: content.field_body.0,
+    }%}
+</div>

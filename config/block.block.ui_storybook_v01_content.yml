@@ -1,0 +1,22 @@
+uuid: fe14ade4-47af-4501-856a-38933dfc05b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ui_storybook_v01
+_core:
+  default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
+id: ui_storybook_v01_content
+theme: ui_storybook_v01
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

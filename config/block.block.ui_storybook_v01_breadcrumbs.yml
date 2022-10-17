@@ -1,0 +1,22 @@
+uuid: c3ca9fb2-3224-43f2-8a2c-f838f0560361
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ui_storybook_v01
+_core:
+  default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
+id: ui_storybook_v01_breadcrumbs
+theme: ui_storybook_v01
+region: content
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

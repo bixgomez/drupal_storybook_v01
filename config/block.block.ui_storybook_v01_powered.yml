@@ -1,0 +1,22 @@
+uuid: 2b079c59-df51-49b3-957d-bd679276cc9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ui_storybook_v01
+_core:
+  default_config_hash: I6Esh8cDlPdl2POZg4MOSRUrQNYA1UNCJCxL2yqT_wc
+id: ui_storybook_v01_powered
+theme: ui_storybook_v01
+region: header
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
