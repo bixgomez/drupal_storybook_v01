@@ -1,4 +1,6 @@
+import TwigBreakpoints from './breakpoints.local.twig'
 import BreakpointsDocs from '!!raw-loader!./breakpoints.docs.mdx'
+import TwigColors from "../colors/colors.local.twig";
 
 export default {
 	title: 'Utilities/Breakpoints',
@@ -13,6 +15,6 @@ export default {
 	},
 }
 
-const Template = ({}) => ''
+const Template = ({ breakpoints }) => TwigBreakpoints({ breakpoints })
 
 export const Breakpoints = Template.bind({})

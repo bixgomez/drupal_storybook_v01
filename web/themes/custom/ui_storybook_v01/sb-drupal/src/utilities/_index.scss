@@ -1,3 +1,8 @@
+// Stylesheet-only items.
+@forward './normalize';
+@forward './fonts';
+@forward './variables';
+
 @forward './breakpoints/breakpoints';
 @forward './container/container';
 @forward './grid/grid';

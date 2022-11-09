@@ -54,11 +54,12 @@ export const parameters = {
 			order: [
 				'Documentation',
 				['Introduction', 'Installation', 'Theme Setup', 'Theme Usage', '*'],
-				'Foundations',
 				'Utilities',
-				'Components',
-				['Icon', 'Button', 'Link', 'Card', 'Tabs', '*'],
-				'Recipes',
+				'Atoms',
+				'Molecules',
+				'Organisms',
+				'Templates',
+				'Pages'
 			],
 		},
 	},

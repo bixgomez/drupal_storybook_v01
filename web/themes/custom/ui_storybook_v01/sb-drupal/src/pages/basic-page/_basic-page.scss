@@ -1,0 +1,52 @@
+@use '../../utilities/_variables.scss' as *;
+@use '../../utilities/breakpoints/_breakpoints.scss' as *;
+
+.page-wrapper {
+  position: relative;
+
+  &--debug {
+
+    &:before {
+      content: '';
+      line-height: 1;
+      padding: 4px 6px;
+      background-color: rgba(white, .5);
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      border: 1px dashed black;
+    }
+
+    @include breakpoint(small) {
+      background-color: rgba(pink, .25);
+
+      &:before {
+        content: 'small'
+      }
+    }
+
+    @include breakpoint(medium) {
+      background-color: rgba(orange, .25);
+
+      &:before {
+        content: 'medium'
+      }
+    }
+
+    @include breakpoint(large) {
+      background-color: rgba(green, .125);
+
+      &:before {
+        content: 'large'
+      }
+    }
+
+    @include breakpoint(max) {
+      background-color: rgba(blue, .125);
+
+      &:before {
+        content: 'max'
+      }
+    }
+  }
+}

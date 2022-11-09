@@ -1,8 +1,24 @@
-// Use all foundations styles.
-@use 'foundations';
-
 // Use all utilities styles;
 @use 'utilities';
 
-// Use all components styles.
-@use 'components';
+// Use all atoms styles.
+@use 'atoms';
+
+// Use all molecules styles.
+@use 'molecules';
+
+// Use all organisms styles.
+@use 'organisms';
+
+// Use all templates styles.
+@use 'templates';
+
+// Use all pages styles.
+@use 'pages';
+
+.sb-show-main.sb-main-padded {
+  // margin: 0;
+  // padding: 0;
+  // display: block;
+  // box-sizing: border-box;
+}
