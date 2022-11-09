@@ -16,7 +16,6 @@ var config = {}
 config.utilities = {
 	scss: 'src/utilities/**/_*.scss',
 	js: 'src/utilities/**/*.behaviors.js',
-	twig: ['src/utilities/**/*.twig', '!src/utilities/**/*.local.twig'],
 }
 config.atoms = {
 	scss: 'src/atoms/**/_*.scss',
@@ -36,12 +35,10 @@ config.organisms = {
 config.templates = {
 	scss: 'src/templates/**/_*.scss',
 	js: 'src/templates/**/*.behaviors.js',
-	twig: ['src/templates/**/*.twig', '!src/templates/**/*.local.twig'],
 }
 config.pages = {
 	scss: 'src/pages/**/_*.scss',
 	js: 'src/pages/**/*.behaviors.js',
-	twig: ['src/pages/**/*.twig', '!src/pages/**/*.local.twig'],
 }
 
 config.stylesMain = 'src/sb-main.scss'
@@ -131,34 +128,51 @@ const watchJs = () => {
 	)
 }
 
-// Collect Twig files for dist.
-const collectTwig = (done) => {
-	src(config.utilities.js,
-			config.atoms.twig,
-			config.molecules.twig,
-			config.organisms.twig,
-			config.templates.twig,
-			config.pages.twig)
-		.pipe(replace('"../../', '"@sb/'))
-		.pipe(replace('"../', '"@sb/'))
-		.pipe(dest(config.dist.twig))
+// TODO:  Is there a more efficient way to do this?
+
+// Collect Atoms Twig files for dist.
+const collectAtomsTwig = (done) => {
+	src(config.atoms.twig)
+			.pipe(replace('"../../', '"@sb/'))
+			.pipe(replace('"../', '"@sb/'))
+			.pipe(dest(config.dist.twig))
+	done()
+}
+
+// Collect Molecules Twig files for dist.
+const collectMoleculesTwig = (done) => {
+	src(config.molecules.twig)
+			.pipe(replace('"../../atoms/', '"@sb/'))
+			.pipe(replace('"../../', '"@sb/'))
+			.pipe(replace('"../', '"@sb/'))
+			.pipe(dest(config.dist.twig))
+	done()
+}
+
+// Collect Organisms Twig files for dist.
+const collectOrganismsTwig = (done) => {
+	src(config.organisms.twig)
+			.pipe(replace('"../../atoms/', '"@sb/'))
+			.pipe(replace('"../../molecules/', '"@sb/'))
+			.pipe(replace('"../../', '"@sb/'))
+			.pipe(replace('"../', '"@sb/'))
+			.pipe(dest(config.dist.twig))
 	done()
 }
 
 // Watch for Twig changes + re-collect.
 const watchTwig = () => {
-	watch(config.utilities.twig, collectTwig)
-	watch(config.atoms.twig, collectTwig)
-	watch(config.molecules.twig, collectTwig)
-	watch(config.organisms.twig, collectTwig)
-	watch(config.templates.twig, collectTwig)
-	watch(config.pages.twig, collectTwig)
+	watch(config.atoms.twig, collectAtomsTwig)
+	watch(config.molecules.twig, collectMoleculesTwig)
+	watch(config.organisms.twig, collectOrganismsTwig)
 }
 
 exports.default = series(
 	cleanDist,
 	compileStyles,
 	compileJs,
-	collectTwig,
+	collectAtomsTwig,
+	collectMoleculesTwig,
+	collectOrganismsTwig,
 	parallel(watchStyles, watchJs, watchTwig)
 )

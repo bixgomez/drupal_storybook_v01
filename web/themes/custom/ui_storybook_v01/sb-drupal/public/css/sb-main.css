@@ -844,6 +844,7 @@ p {
   font-weight: 400;
   margin-block-start: 0;
   margin-block-end: 1rem;
+  background-color: transparent;
 }
 
 .sb-textarea {
@@ -874,21 +875,23 @@ p {
   border: 1px solid var(--color-neutral-regular-light);
   box-shadow: 1px 0.5px 11px 1px rgba(0, 0, 0, 0.11);
 }
+.sb-card .sb-card__image {
+  aspect-ratio: 2/1.25;
+  overflow: hidden;
+  position: relative;
+}
+.sb-card .sb-card__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media (min-width: 640px) {
   .sb-card {
     max-width: 400px;
   }
 }
 
-.sb-card--wide {
-  display: grid;
-  grid-template-rows: auto auto auto 1fr auto;
-  box-sizing: border-box;
-  padding-block-end: 1.125rem;
-  background-color: var(--color-neutral-white);
-  border: 1px solid var(--color-neutral-regular-light);
-  box-shadow: 1px 0.5px 11px 1px rgba(0, 0, 0, 0.11);
-}
 @media (min-width: 640px) {
   .sb-card--wide {
     max-width: 800px;
@@ -896,14 +899,6 @@ p {
 }
 .sb-card--wide .sb-card__image {
   aspect-ratio: 5/1;
-  overflow: hidden;
-  position: relative;
-}
-.sb-card--wide .sb-card__image img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .sb-card--without-image {
@@ -1149,40 +1144,27 @@ p {
   content: "";
   line-height: 1;
   padding: 4px 6px;
-  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 4px;
   right: 4px;
   border: 1px dashed black;
 }
 @media (max-width: 639px) {
-  .page-wrapper--debug {
-    background-color: rgba(255, 192, 203, 0.25);
-  }
   .page-wrapper--debug:before {
     content: "small";
   }
 }
 @media (min-width: 640px) {
-  .page-wrapper--debug {
-    background-color: rgba(255, 165, 0, 0.25);
-  }
   .page-wrapper--debug:before {
     content: "medium";
   }
 }
 @media (min-width: 1024px) {
-  .page-wrapper--debug {
-    background-color: rgba(0, 128, 0, 0.125);
-  }
   .page-wrapper--debug:before {
     content: "large";
   }
 }
 @media (min-width: 1200px) {
-  .page-wrapper--debug {
-    background-color: rgba(0, 0, 255, 0.125);
-  }
   .page-wrapper--debug:before {
     content: "max";
   }

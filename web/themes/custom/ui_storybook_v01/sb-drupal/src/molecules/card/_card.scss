@@ -9,26 +9,8 @@
 	border: 1px solid var(--color-neutral-regular-light);
 	box-shadow: 1px 0.5px 11px 1px rgba(0, 0, 0, 0.11);
 
-	@include breakpoint(medium) {
-		max-width: 400px;
-	}
-}
-
-.sb-card--wide {
-	display: grid;
-	grid-template-rows: auto auto auto 1fr auto;
-	box-sizing: border-box;
-	padding-block-end: 1.125rem;
-	background-color: var(--color-neutral-white);
-	border: 1px solid var(--color-neutral-regular-light);
-	box-shadow: 1px 0.5px 11px 1px rgba(0, 0, 0, 0.11);
-
-	@include breakpoint(medium) {
-		max-width: 800px;
-	}
-
 	.sb-card__image {
-		aspect-ratio: 5/1;
+		aspect-ratio: 2/1.25;
 		overflow: hidden;
 		position: relative;
 
@@ -38,6 +20,21 @@
 			height: 100%;
 			object-fit: cover;
 		}
+	}
+
+	@include breakpoint(medium) {
+		max-width: 400px;
+	}
+}
+
+.sb-card--wide {
+
+	@include breakpoint(medium) {
+		max-width: 800px;
+	}
+
+	.sb-card__image {
+		aspect-ratio: 5/1;
 	}
 }
 
