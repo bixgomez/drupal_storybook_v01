@@ -2,13 +2,7 @@
 
   {% if image.src %}
   <div class="sb-card__image">
-    {% if link %}
-    <a href="{{ link.url }}" tabindex="-1" aria-hidden="true">
-      <img src="{{ image.src }}" alt="{{ image.alt }}"/>
-    </a>
-    {% else %}
     <img src="{{ image.src }}" alt="{{ image.alt }}"/>
-    {% endif %}
   </div>
   {% endif %}
 

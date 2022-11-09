@@ -93,6 +93,11 @@ const Template = ({
 
 export const DefaultCard = Template.bind({})
 
+export const WideCard = Template.bind({})
+WideCard.args = {
+	extra_classes: 'sb-card--wide',
+}
+
 export const CardWithoutImage = Template.bind({})
 CardWithoutImage.args = {
 	image: '',
