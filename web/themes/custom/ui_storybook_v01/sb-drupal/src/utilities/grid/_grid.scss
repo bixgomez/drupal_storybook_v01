@@ -1,5 +1,11 @@
 @use '../breakpoints/_breakpoints.scss' as *;
 
+.ui-container {
+	background-color: pink;
+	width: auto;
+	min-height: 10px;
+}
+
 .sb-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);

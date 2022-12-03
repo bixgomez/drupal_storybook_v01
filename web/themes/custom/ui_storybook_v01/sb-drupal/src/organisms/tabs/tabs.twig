@@ -21,14 +21,6 @@
           <span>
             {{ tab.tabLabel }}
           </span>
-          {% include "../icon/icon.twig" with {
-            iconName: 'symbol-plus',
-            cssClass: 'sb-tab__icon sb-tab__icon-closed'
-          }%}
-          {% include "../icon/icon.twig" with {
-            iconName: 'symbol-minus',
-            cssClass: 'sb-tab__icon sb-tab__icon-opened'
-          }%}
         </button>
         <section class="sb-tabs__panel-content">
           {{ tab.panelContent }}

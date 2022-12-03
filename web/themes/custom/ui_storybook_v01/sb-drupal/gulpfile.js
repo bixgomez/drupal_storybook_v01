@@ -16,6 +16,7 @@ var config = {}
 config.utilities = {
 	scss: 'src/utilities/**/_*.scss',
 	js: 'src/utilities/**/*.behaviors.js',
+	twig: ['src/utilities/**/*.twig', '!src/utilities/**/*.local.twig'],
 }
 config.atoms = {
 	scss: 'src/atoms/**/_*.scss',
@@ -35,10 +36,12 @@ config.organisms = {
 config.templates = {
 	scss: 'src/templates/**/_*.scss',
 	js: 'src/templates/**/*.behaviors.js',
+	twig: ['src/templates/**/*.twig', '!src/templates/**/*.local.twig'],
 }
 config.pages = {
 	scss: 'src/pages/**/_*.scss',
 	js: 'src/pages/**/*.behaviors.js',
+	twig: ['src/pages/**/*.twig', '!src/pages/**/*.local.twig'],
 }
 
 config.stylesMain = 'src/sb-main.scss'
@@ -130,9 +133,19 @@ const watchJs = () => {
 
 // TODO:  Is there a more efficient way to do this?
 
+// Collect Utilities Twig files for dist.
+const collectUtilitiesTwig = (done) => {
+	src(config.utilities.twig)
+			.pipe(replace('"../../', '"@sb/'))
+			.pipe(replace('"../', '"@sb/'))
+			.pipe(dest(config.dist.twig))
+	done()
+}
+
 // Collect Atoms Twig files for dist.
 const collectAtomsTwig = (done) => {
 	src(config.atoms.twig)
+			.pipe(replace('"../../utilities/', '"@sb/'))
 			.pipe(replace('"../../', '"@sb/'))
 			.pipe(replace('"../', '"@sb/'))
 			.pipe(dest(config.dist.twig))
@@ -142,6 +155,7 @@ const collectAtomsTwig = (done) => {
 // Collect Molecules Twig files for dist.
 const collectMoleculesTwig = (done) => {
 	src(config.molecules.twig)
+			.pipe(replace('"../../utilities/', '"@sb/'))
 			.pipe(replace('"../../atoms/', '"@sb/'))
 			.pipe(replace('"../../', '"@sb/'))
 			.pipe(replace('"../', '"@sb/'))
@@ -152,6 +166,7 @@ const collectMoleculesTwig = (done) => {
 // Collect Organisms Twig files for dist.
 const collectOrganismsTwig = (done) => {
 	src(config.organisms.twig)
+			.pipe(replace('"../../utilities/', '"@sb/'))
 			.pipe(replace('"../../atoms/', '"@sb/'))
 			.pipe(replace('"../../molecules/', '"@sb/'))
 			.pipe(replace('"../../', '"@sb/'))
@@ -160,19 +175,52 @@ const collectOrganismsTwig = (done) => {
 	done()
 }
 
+// Collect Templates Twig files for dist.
+const collectTemplatesTwig = (done) => {
+	src(config.templates.twig)
+			.pipe(replace('"../../utilities/', '"@sb/'))
+			.pipe(replace('"../../atoms/', '"@sb/'))
+			.pipe(replace('"../../molecules/', '"@sb/'))
+			.pipe(replace('"../../organisms/', '"@sb/'))
+			.pipe(replace('"../../', '"@sb/'))
+			.pipe(replace('"../', '"@sb/'))
+			.pipe(dest(config.dist.twig))
+	done()
+}
+
+// Collect Pages Twig files for dist.
+const collectPagesTwig = (done) => {
+	src(config.pages.twig)
+			.pipe(replace('"../../utilities/', '"@sb/'))
+			.pipe(replace('"../../atoms/', '"@sb/'))
+			.pipe(replace('"../../molecules/', '"@sb/'))
+			.pipe(replace('"../../organisms/', '"@sb/'))
+			.pipe(replace('"../../templates/', '"@sb/'))
+			.pipe(replace('"../../', '"@sb/'))
+			.pipe(replace('"../', '"@sb/'))
+			.pipe(dest(config.dist.twig))
+	done()
+}
+
 // Watch for Twig changes + re-collect.
 const watchTwig = () => {
+	watch(config.utilities.twig, collectUtilitiesTwig)
 	watch(config.atoms.twig, collectAtomsTwig)
 	watch(config.molecules.twig, collectMoleculesTwig)
 	watch(config.organisms.twig, collectOrganismsTwig)
+	watch(config.templates.twig, collectTemplatesTwig)
+	watch(config.pages.twig, collectPagesTwig)
 }
 
 exports.default = series(
 	cleanDist,
 	compileStyles,
 	compileJs,
+	collectUtilitiesTwig,
 	collectAtomsTwig,
 	collectMoleculesTwig,
 	collectOrganismsTwig,
+	collectTemplatesTwig,
+	collectPagesTwig,
 	parallel(watchStyles, watchJs, watchTwig)
 )

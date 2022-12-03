@@ -10,3 +10,11 @@ p {
   margin-block-end: 1rem;
   background-color: transparent;
 }
+
+.field--name-field-paragraphs {
+  margin: 0;
+
+  > .field__item {
+    margin: 40px 0;
+  }
+}
