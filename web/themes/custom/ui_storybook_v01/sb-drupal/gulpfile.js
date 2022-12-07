@@ -45,10 +45,12 @@ config.pages = {
 }
 
 config.stylesMain = 'src/sb-main.scss'
+
 config.public = {
 	css: 'public/css',
 	img: 'public/img/*',
 }
+
 config.dist = {
 	all: 'dist/*/',
 	css: 'dist/css',
@@ -136,8 +138,8 @@ const watchJs = () => {
 // Collect Utilities Twig files for dist.
 const collectUtilitiesTwig = (done) => {
 	src(config.utilities.twig)
-			.pipe(replace('"../../', '"@sb/'))
-			.pipe(replace('"../', '"@sb/'))
+			.pipe(replace('"../../', 						'"@sb/'))
+			.pipe(replace('"../', 								'"@sb/'))
 			.pipe(dest(config.dist.twig))
 	done()
 }
@@ -145,9 +147,9 @@ const collectUtilitiesTwig = (done) => {
 // Collect Atoms Twig files for dist.
 const collectAtomsTwig = (done) => {
 	src(config.atoms.twig)
-			.pipe(replace('"../../utilities/', '"@sb/'))
-			.pipe(replace('"../../', '"@sb/'))
-			.pipe(replace('"../', '"@sb/'))
+			.pipe(replace('"../../utilities/', 	'"@sb/'))
+			.pipe(replace('"../../', 						'"@sb/'))
+			.pipe(replace('"../', 								'"@sb/'))
 			.pipe(dest(config.dist.twig))
 	done()
 }
@@ -155,10 +157,10 @@ const collectAtomsTwig = (done) => {
 // Collect Molecules Twig files for dist.
 const collectMoleculesTwig = (done) => {
 	src(config.molecules.twig)
-			.pipe(replace('"../../utilities/', '"@sb/'))
-			.pipe(replace('"../../atoms/', '"@sb/'))
-			.pipe(replace('"../../', '"@sb/'))
-			.pipe(replace('"../', '"@sb/'))
+			.pipe(replace('"../../utilities/', 	'"@sb/'))
+			.pipe(replace('"../../atoms/', 			'"@sb/'))
+			.pipe(replace('"../../', 						'"@sb/'))
+			.pipe(replace('"../', 								'"@sb/'))
 			.pipe(dest(config.dist.twig))
 	done()
 }
@@ -166,11 +168,11 @@ const collectMoleculesTwig = (done) => {
 // Collect Organisms Twig files for dist.
 const collectOrganismsTwig = (done) => {
 	src(config.organisms.twig)
-			.pipe(replace('"../../utilities/', '"@sb/'))
-			.pipe(replace('"../../atoms/', '"@sb/'))
-			.pipe(replace('"../../molecules/', '"@sb/'))
-			.pipe(replace('"../../', '"@sb/'))
-			.pipe(replace('"../', '"@sb/'))
+			.pipe(replace('"../../utilities/',  	'"@sb/'))
+			.pipe(replace('"../../atoms/',      	'"@sb/'))
+			.pipe(replace('"../../molecules/',  	'"@sb/'))
+			.pipe(replace('"../../', 						'"@sb/'))
+			.pipe(replace('"../', 								'"@sb/'))
 			.pipe(dest(config.dist.twig))
 	done()
 }
@@ -178,12 +180,12 @@ const collectOrganismsTwig = (done) => {
 // Collect Templates Twig files for dist.
 const collectTemplatesTwig = (done) => {
 	src(config.templates.twig)
-			.pipe(replace('"../../utilities/', '"@sb/'))
-			.pipe(replace('"../../atoms/', '"@sb/'))
-			.pipe(replace('"../../molecules/', '"@sb/'))
-			.pipe(replace('"../../organisms/', '"@sb/'))
-			.pipe(replace('"../../', '"@sb/'))
-			.pipe(replace('"../', '"@sb/'))
+			.pipe(replace('"../../utilities/', 	'"@sb/'))
+			.pipe(replace('"../../atoms/', 			'"@sb/'))
+			.pipe(replace('"../../molecules/', 	'"@sb/'))
+			.pipe(replace('"../../organisms/', 	'"@sb/'))
+			.pipe(replace('"../../', 						'"@sb/'))
+			.pipe(replace('"../', 								'"@sb/'))
 			.pipe(dest(config.dist.twig))
 	done()
 }
@@ -191,13 +193,13 @@ const collectTemplatesTwig = (done) => {
 // Collect Pages Twig files for dist.
 const collectPagesTwig = (done) => {
 	src(config.pages.twig)
-			.pipe(replace('"../../utilities/', '"@sb/'))
-			.pipe(replace('"../../atoms/', '"@sb/'))
-			.pipe(replace('"../../molecules/', '"@sb/'))
-			.pipe(replace('"../../organisms/', '"@sb/'))
-			.pipe(replace('"../../templates/', '"@sb/'))
-			.pipe(replace('"../../', '"@sb/'))
-			.pipe(replace('"../', '"@sb/'))
+			.pipe(replace('"../../utilities/', 	'"@sb/'))
+			.pipe(replace('"../../atoms/', 			'"@sb/'))
+			.pipe(replace('"../../molecules/', 	'"@sb/'))
+			.pipe(replace('"../../organisms/', 	'"@sb/'))
+			.pipe(replace('"../../templates/', 	'"@sb/'))
+			.pipe(replace('"../../', 						'"@sb/'))
+			.pipe(replace('"../', 								'"@sb/'))
 			.pipe(dest(config.dist.twig))
 	done()
 }
